@@ -38,7 +38,13 @@ object frmLabelExample: TfrmLabelExample
     AutoSize = False
     Caption = #47112#51060#48660' +1'
     Color = clBlue
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clYellow
+    Font.Height = -27
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
     ParentColor = False
+    ParentFont = False
     Transparent = False
   end
 end
