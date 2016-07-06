@@ -2,7 +2,7 @@ program prjVCL;
 
 uses
   Vcl.Forms,
-  untM2Ex2 in 'Module2\ex2\untM2Ex2.pas' {Form1};
+  untM23Ex1 in 'Module23\ex1\untM23Ex1.pas' {Form1};
 
 {$R *.res}
 
