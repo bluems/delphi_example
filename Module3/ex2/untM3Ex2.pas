@@ -15,6 +15,8 @@ type
     Label3: TLabel;
     btnCtoF: TButton;
     btnFtoC: TButton;
+    edtFRes: TEdit;
+    edtCRes: TEdit;
     procedure btnCtoFClick(Sender: TObject);
     procedure btnFtoCClick(Sender: TObject);
 
@@ -38,7 +40,7 @@ var
   f:single;
 begin
   f:=StrToFloat(edtF.Text);
-  edtC.Text:=FloatToStr(5/9*f-32);
+  edtCRes.Text:=FloatToStr(5/9*f-32);
 end;
 
 procedure TForm1.btnFtoCClick(Sender: TObject);
@@ -46,7 +48,7 @@ var
   c:single;
 begin
   c:=StrToFloat(edtC.Text);
-  edtF.Text:=FloatToStr(9/5*c+32);
+  edtFRes.Text:=FloatToStr(9/5*c+32);
 end;
 
 end.

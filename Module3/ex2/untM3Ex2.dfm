@@ -51,7 +51,7 @@ object Form1: TForm1
   end
   object btnCtoF: TButton
     Left = 136
-    Top = 96
+    Top = 136
     Width = 75
     Height = 25
     Caption = #54868#50472'->'#49453#50472
@@ -60,11 +60,29 @@ object Form1: TForm1
   end
   object btnFtoC: TButton
     Left = 297
-    Top = 96
+    Top = 136
     Width = 75
     Height = 25
     Caption = #49453#50472'->'#54868#50472
     TabOrder = 3
     OnClick = btnFtoCClick
+  end
+  object edtFRes: TEdit
+    Left = 112
+    Top = 176
+    Width = 121
+    Height = 21
+    BorderStyle = bsNone
+    Color = clHighlight
+    TabOrder = 4
+  end
+  object edtCRes: TEdit
+    Left = 272
+    Top = 176
+    Width = 121
+    Height = 21
+    BorderStyle = bsNone
+    Color = clHighlight
+    TabOrder = 5
   end
 end
