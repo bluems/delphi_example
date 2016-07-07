@@ -3,9 +3,9 @@ program test;
 uses
   Vcl.Forms,
   Utest1 in 'Utest1.pas' {Form1},
-  Utest2 in 'utest2.pas' {Form2},
-  Utest3 in 'Utest3.pas' {Form3},
-  Utest4 in 'Utest4.pas';
+  utest2 in 'utest2.pas' {Form2},
+  Utest4 in 'Utest4.pas',
+  Utest3 in 'Utest3.pas' {Form3};
 
 {$R *.res}
 
@@ -13,7 +13,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm1, Form1);
-  Application.CreateForm(TForm2, Form2);
-  Application.CreateForm(TForm3, Form3);
   Application.Run;
 end.
