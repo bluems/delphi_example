@@ -5,7 +5,8 @@ uses
   Utest1 in 'Utest1.pas' {Form1},
   utest2 in 'utest2.pas' {Form2},
   Utest4 in 'Utest4.pas',
-  Utest3 in 'Utest3.pas' {Form3};
+  Utest3 in 'Utest3.pas' {Form3},
+  Udm in 'Udm.pas' {dm: TDataModule};
 
 {$R *.res}
 
@@ -13,5 +14,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(Tdm, dm);
   Application.Run;
 end.
