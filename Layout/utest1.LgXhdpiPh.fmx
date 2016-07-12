@@ -12,6 +12,10 @@ inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
       Size.Width = 297.000000000000000000
       Size.PlatformDefault = False
     end
+    inherited Memo1: TMemo
+      Viewport.Width = 297.000000000000000000
+      Viewport.Height = 42.000000000000000000
+    end
   end
   inherited ToolBar1: TToolBar
     Size.Width = 450.000000000000000000

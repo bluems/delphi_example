@@ -50,6 +50,7 @@ type
     Button2: TButton;
     FloatAnimation3: TFloatAnimation;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -70,6 +71,12 @@ begin
 //    BottomText.AnimateFloatDelay( 'Position.X', 0, 10, 3 );
 
   TAnimator.Create.AnimateFloat( BottomText, 'Position.X', 0, 10 );
+end;
+
+procedure TForm4.Button2Click(Sender: TObject);
+begin
+  floatanimation3.Enabled:=true;
+  floatanimation3.Start;
 end;
 
 end.
