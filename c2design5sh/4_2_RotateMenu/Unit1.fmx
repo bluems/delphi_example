@@ -1,0 +1,318 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  Touch.GestureManager = GestureManager1
+  OnGesture = FormGesture
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      Align = Center
+      AutoSize = True
+      Size.Width = 100.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = #50724#45720#51032' '#49548#49885
+    end
+  end
+  object Layout1: TLayout
+    Position.X = 44.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 313.000000000000000000
+    Size.Height = 337.000000000000000000
+    Size.PlatformDefault = False
+    object Circle1: TCircle
+      Size.Width = 300.000000000000000000
+      Size.Height = 300.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object Rectangle1: TRectangle
+        Fill.Kind = Gradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFF4B7571
+            Offset = 0.000000000000000000
+          end
+          item
+            Color = xFFF99B9B
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.StartPosition.X = 0.500000000000000000
+        Fill.Gradient.StartPosition.Y = 1.000000000000000000
+        Fill.Gradient.StopPosition.X = 0.499999970197677600
+        Fill.Gradient.StopPosition.Y = 0.000000000000000000
+        HitTest = False
+        Position.X = 213.000000000000000000
+        Position.Y = 135.000000000000000000
+        Size.Width = 180.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        object Text1: TText
+          Align = Client
+          Size.Width = 180.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          Text = #45432#50896#44396
+          TextSettings.Font.Size = 15.000000000000000000
+          OnClick = Text1Click
+        end
+      end
+      object Rectangle2: TRectangle
+        Fill.Kind = Gradient
+        Fill.Gradient.Points = <
+          item
+            Color = claBlack
+            Offset = 0.000000000000000000
+          end
+          item
+            Color = claWhite
+            Offset = 1.000000000000000000
+          end>
+        HitTest = False
+        Position.X = 166.000000000000000000
+        Position.Y = 28.000000000000000000
+        RotationAngle = -45.000000000000000000
+        Size.Width = 180.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object Text2: TText
+          Align = Client
+          Size.Width = 180.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          Text = #44053#49436#44396
+          TextSettings.Font.Size = 15.000000000000000000
+          OnClick = Text1Click
+        end
+      end
+      object Rectangle3: TRectangle
+        Fill.Kind = Gradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFF1664E4
+            Offset = 0.000000000000000000
+          end
+          item
+            Color = claWhite
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.StartPosition.X = 0.500000000000000000
+        Fill.Gradient.StartPosition.Y = 1.000000000000000000
+        Fill.Gradient.StopPosition.X = 0.499999970197677600
+        Fill.Gradient.StopPosition.Y = 0.000000000000000000
+        HitTest = False
+        Position.X = 58.000000000000000000
+        Position.Y = -14.000000000000000000
+        RotationAngle = 270.000000000000000000
+        Size.Width = 180.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        object Text3: TText
+          Align = Client
+          Size.Width = 180.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          Text = #46041#51089#44396
+          TextSettings.Font.Size = 15.000000000000000000
+          TextSettings.FontColor = claAzure
+          OnClick = Text1Click
+        end
+      end
+      object FloatAnimation1: TFloatAnimation
+        Enabled = True
+        Duration = 0.250000000000000000
+        PropertyName = 'RotationAngle'
+        StartValue = 0.000000000000000000
+        StopValue = 45.000000000000000000
+      end
+      object Rectangle4: TRectangle
+        Fill.Kind = Gradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFFA67934
+            Offset = 0.000000000000000000
+          end
+          item
+            Color = claWhite
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.StartPosition.X = 0.500000000000000000
+        Fill.Gradient.StartPosition.Y = 1.000000000000000000
+        Fill.Gradient.StopPosition.X = 0.499999970197677600
+        Fill.Gradient.StopPosition.Y = 0.000000000000000000
+        HitTest = False
+        Position.X = 59.000000000000000000
+        Position.Y = 281.000000000000000000
+        RotationAngle = 90.000000000000000000
+        Size.Width = 180.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        object Text4: TText
+          Align = Client
+          Size.Width = 180.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          Text = #49436#52488#44396
+          TextSettings.Font.Size = 15.000000000000000000
+          OnClick = Text1Click
+        end
+      end
+      object Rectangle5: TRectangle
+        Fill.Kind = Gradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFF1F9092
+            Offset = 0.000000000000000000
+          end
+          item
+            Color = claWhite
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.StartPosition.X = 0.500000000000000000
+        Fill.Gradient.StartPosition.Y = 1.000000000000000000
+        Fill.Gradient.StopPosition.X = 0.499999970197677600
+        Fill.Gradient.StopPosition.Y = 0.000000000000000000
+        HitTest = False
+        Position.X = -96.000000000000000000
+        Position.Y = 135.000000000000000000
+        RotationAngle = 180.000000000000000000
+        Size.Width = 180.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        object Text5: TText
+          Align = Client
+          Size.Width = 180.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          Text = #51333#47196#44396
+          TextSettings.Font.Size = 15.000000000000000000
+          OnClick = Text1Click
+        end
+      end
+      object Rectangle6: TRectangle
+        Fill.Kind = Gradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFF9B9932
+            Offset = 0.000000000000000000
+          end
+          item
+            Color = claWhite
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.StartPosition.X = 0.500000000000000000
+        Fill.Gradient.StartPosition.Y = 1.000000000000000000
+        Fill.Gradient.StopPosition.X = 0.499999970197677600
+        Fill.Gradient.StopPosition.Y = 0.000000000000000000
+        HitTest = False
+        Position.X = -50.000000000000000000
+        Position.Y = 30.000000000000000000
+        RotationAngle = -135.000000000000000000
+        Size.Width = 180.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        object Text6: TText
+          Align = Client
+          Size.Width = 180.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          Text = #46020#48393#44396
+          TextSettings.Font.Size = 15.000000000000000000
+          OnClick = Text1Click
+        end
+      end
+      object Rectangle7: TRectangle
+        Fill.Kind = Gradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFFC53280
+            Offset = 0.000000000000000000
+          end
+          item
+            Color = claWhite
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.StartPosition.X = 0.500000000000000000
+        Fill.Gradient.StartPosition.Y = 1.000000000000000000
+        Fill.Gradient.StopPosition.X = 0.499999970197677600
+        Fill.Gradient.StopPosition.Y = 0.000000000000000000
+        HitTest = False
+        Position.X = -51.000000000000000000
+        Position.Y = 240.000000000000000000
+        RotationAngle = 135.000000000000000000
+        Size.Width = 180.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        object Text7: TText
+          Align = Client
+          Size.Width = 180.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          Text = #44053#45224#44396
+          TextSettings.Font.Size = 15.000000000000000000
+          OnClick = Text1Click
+        end
+      end
+      object Rectangle8: TRectangle
+        Fill.Kind = Gradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFF55288B
+            Offset = 0.000000000000000000
+          end
+          item
+            Color = claWhite
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.StartPosition.X = 0.500000000000000000
+        Fill.Gradient.StartPosition.Y = 1.000000000000000000
+        Fill.Gradient.StopPosition.X = 0.499999970197677600
+        Fill.Gradient.StopPosition.Y = 0.000000000000000000
+        HitTest = False
+        Position.X = 168.000000000000000000
+        Position.Y = 240.000000000000000000
+        RotationAngle = 45.000000000000000000
+        Size.Width = 180.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        object Text8: TText
+          Align = Client
+          Size.Width = 180.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          Text = #50577#52380#44396
+          TextSettings.Font.Size = 15.000000000000000000
+          TextSettings.FontColor = claCornsilk
+          OnClick = Text1Click
+        end
+      end
+    end
+  end
+  object GestureManager1: TGestureManager
+    Left = 104
+    Top = 64
+    GestureData = <
+      item
+        Control = Owner
+        Collection = <
+          item
+            GestureID = sgiUp
+          end
+          item
+            GestureID = sgiDown
+          end>
+      end>
+  end
+end
