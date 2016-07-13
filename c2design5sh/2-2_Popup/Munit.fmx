@@ -1,0 +1,106 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 529
+  ClientWidth = 351
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object TabControl1: TTabControl
+    Size.Width = 353.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    Sizes = (
+      353s
+      0s
+      353s
+      0s
+      353s
+      0s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 117.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem1'
+      ExplicitSize.cx = 117.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 117.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem2'
+      ExplicitSize.cx = 117.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 119.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem3'
+      ExplicitSize.cx = 119.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+  end
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 351.000000000000000000
+    Size.Height = 529.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Button1: TButton
+      Position.X = 120.000000000000000000
+      Position.Y = 240.000000000000000000
+      TabOrder = 0
+      Text = 'Button1'
+    end
+    inline MyFrame1: TMyFrame
+      Position.X = -68.000000000000000000
+      Position.Y = -104.000000000000000000
+      Size.Width = 421.000000000000000000
+      Size.Height = 633.000000000000000000
+      Size.PlatformDefault = False
+      inherited Image1: TImage
+        MultiResBitmap.Height = 400
+        MultiResBitmap.Width = 400
+        Align = None
+        Position.X = 64.000000000000000000
+        Position.Y = 152.000000000000000000
+        Size.Width = 353.000000000000000000
+        Size.Height = 481.000000000000000000
+      end
+    end
+  end
+  object Layout2: TLayout
+    Position.Y = 48.000000000000000000
+    Size.Width = 353.000000000000000000
+    Size.Height = 529.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 2
+  end
+end

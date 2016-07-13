@@ -1,0 +1,251 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 551
+  ClientWidth = 713
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnResize = FormResize
+  DesignerMasterStyle = 3
+  object MViewport3D: TViewport3D
+    Align = Client
+    Camera = Camera1
+    Color = claBlack
+    Size.Width = 497.000000000000000000
+    Size.Height = 551.000000000000000000
+    Size.PlatformDefault = False
+    UsingDesignCamera = False
+    object Grid3D1: TGrid3D
+      Marks = 4.000000000000000000
+      Frequency = 1.000000000000000000
+      LineColor = x50505050
+      RotationAngle.X = 90.000000000000000000
+      Width = 15.000000000000000000
+      Height = 15.000000000000000000
+      Depth = 0.001000000047497451
+      Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+    end
+    object Cone1: TCone
+      Width = 5.000000000000000000
+      Height = 5.000000000000000000
+      Depth = 5.000000000000000000
+      SubdivisionsCap = 3
+      MaterialSource = LightMaterialSource1
+    end
+    object Camera1: TCamera
+      AngleOfView = 45.000000000000000000
+      Position.Y = -5.000000000000000000
+      Position.Z = -10.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+    end
+    object Light1: TLight
+      Color = claWhite
+      LightType = Point
+      SpotCutOff = 180.000000000000000000
+      Position.Y = -8.000000000000000000
+      Position.Z = -5.000000000000000000
+      RotationAngle.X = 45.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      Quanternion = '(-0.382683426141739,0,0,-0.923879444599152)'
+    end
+    object LightMaterialSource1: TLightMaterialSource
+      Diffuse = claWhite
+      Ambient = xFF202020
+      Emissive = claNull
+      Specular = xFF606060
+      Shininess = 30
+      Left = 848
+      Top = 448
+    end
+    object Cylinder1: TCylinder
+      Position.X = 6.000000000000000000
+      Position.Y = -4.000000000000000000
+      Position.Z = 6.000000000000000000
+      Width = 2.000000000000000000
+      Height = 8.000000000000000000
+      Depth = 2.000000000000000000
+      MaterialSource = LightMaterialSource1
+    end
+    object Cylinder2: TCylinder
+      Position.X = -6.000000000000000000
+      Position.Y = -4.000000000000000000
+      Position.Z = 6.000000000000000000
+      Width = 2.000000000000000000
+      Height = 8.000000000000000000
+      Depth = 2.000000000000000000
+      MaterialSource = LightMaterialSource1
+    end
+    object Text3D1: TText3D
+      Position.Y = -3.000000000000000000
+      Position.Z = -2.000000000000000000
+      Width = 10.000000000000000000
+      Height = 5.000000000000000000
+      Depth = 3.000000000000000000
+      Text = #54620#44544#51096#46120
+      WordWrap = False
+      Flatness = 1.000000000000000000
+      Sides = [Front, Back, Shaft]
+      MaterialBackSource = LightMaterialSource1
+      MaterialShaftSource = LightMaterialSource1
+      MaterialSource = LightMaterialSource1
+    end
+  end
+  object Layout1: TLayout
+    Align = Right
+    Position.X = 497.000000000000000000
+    Size.Width = 216.000000000000000000
+    Size.Height = 551.000000000000000000
+    Size.PlatformDefault = False
+    object PosZ_TrackBar: TTrackBar
+      Tag = -10
+      CanParentFocus = True
+      Max = -20.000000000000000000
+      Min = -40.000000000000000000
+      Orientation = Horizontal
+      Position.X = 32.000000000000000000
+      Position.Y = 232.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Value = -20.000000000000000000
+      OnChange = PosZ_TrackBarChange
+    end
+    object LabelZ: TLabel
+      AutoSize = True
+      Position.X = 8.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 117.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = #52852#47700#46972' Z '#44033#46020
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 8.000000000000000000
+      Position.Y = 136.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = #52852#47700#46972' '#50948#52824
+    end
+    object AngleZ_TrackBar: TTrackBar
+      CanParentFocus = True
+      Frequency = 1.000000000000000000
+      Max = 360.000000000000000000
+      Orientation = Horizontal
+      Position.X = 8.000000000000000000
+      Position.Y = 96.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      OnChange = AngleZ_TrackBarChange
+    end
+    object PosX_TrackBar: TTrackBar
+      CanParentFocus = True
+      Max = 14.000000000000000000
+      Min = -14.000000000000000000
+      Orientation = Horizontal
+      Position.X = 32.000000000000000000
+      Position.Y = 168.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      OnChange = PosX_TrackBarChange
+    end
+    object PosY_TrackBar: TTrackBar
+      Tag = -5
+      CanParentFocus = True
+      Max = 10.000000000000000000
+      Min = -10.000000000000000000
+      Orientation = Horizontal
+      Position.X = 32.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Value = -5.000000000000000000
+      OnChange = PosY_TrackBarChange
+    end
+    object Switch1: TSwitch
+      IsChecked = False
+      Position.X = 88.000000000000000000
+      Position.Y = 272.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      OnSwitch = Switch1Switch
+    end
+    object SpeedButton1: TSpeedButton
+      Position.X = 16.000000000000000000
+      Position.Y = 264.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      Text = 'SpeedButton1'
+      OnClick = SpeedButton1Click
+    end
+    object Label3: TLabel
+      Position.X = 10.000000000000000000
+      Position.Y = 172.000000000000000000
+      Size.Width = 25.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'X'
+    end
+    object Label4: TLabel
+      Position.X = 10.000000000000000000
+      Position.Y = 204.000000000000000000
+      Size.Width = 25.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Y'
+    end
+    object Label5: TLabel
+      Position.X = 10.000000000000000000
+      Position.Y = 236.000000000000000000
+      Size.Width = 25.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Z'
+    end
+    object AngleX_TrackBar: TTrackBar
+      Tag = 360
+      CanParentFocus = True
+      Frequency = 1.000000000000000000
+      Max = 360.000000000000000000
+      Min = 315.000000000000000000
+      Orientation = Horizontal
+      Position.X = 8.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 11
+      Value = 360.000000000000000000
+      OnChange = AngleX_TrackBarChange
+    end
+    object LabelX: TLabel
+      AutoSize = True
+      Position.X = 8.000000000000000000
+      Size.Width = 118.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = #52852#47700#46972' X '#44033#46020
+    end
+  end
+end

@@ -1,0 +1,200 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 615
+  ClientWidth = 360
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 360.000000000000000000
+    Size.Height = 567.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 0
+    TabPosition = Top
+    Sizes = (
+      360s
+      518s
+      360s
+      518s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 180.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'DBExpress '#50672#44208
+      ExplicitSize.cx = 180.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ListView1: TListView
+        ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+        ItemEditAppearanceClassName = 'TListItemRightDetailShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Client
+        Size.Width = 360.000000000000000000
+        Size.Height = 470.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        ItemAppearanceObjects.ItemObjects.Accessory.AccessoryType = Checkmark
+        ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+        SearchVisible = True
+      end
+      object StatusBar1: TStatusBar
+        Position.Y = 470.000000000000000000
+        ShowSizeGrip = True
+        Size.Width = 360.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Select1_sb: TSpeedButton
+          Align = Left
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'organizetoolbutton'
+          Text = 'Select1_sb'
+          OnClick = Select1_sbClick
+        end
+        object MsgLabel: TLabel
+          Align = Right
+          Position.X = 184.000000000000000000
+          Size.Width = 176.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = #49888#44508#52628#44032' '#53581#49828#53944
+        end
+        object Insert_sb: TSpeedButton
+          Position.X = 64.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'addtoolbutton'
+          Text = 'Insert_sb'
+          OnClick = Insert_sbClick
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 180.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'FireDAC '#50672#44208
+      ExplicitSize.cx = 180.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object StatusBar2: TStatusBar
+        Position.Y = 472.000000000000000000
+        ShowSizeGrip = True
+        Size.Width = 360.000000000000000000
+        Size.Height = 46.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object FireSel_sb: TSpeedButton
+          Position.Y = 2.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'playtoolbutton'
+          Text = 'FireSel_sb'
+          OnClick = FireSel_sbClick
+        end
+        object FireDel_SB: TSpeedButton
+          Position.X = 56.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'trashtoolbutton'
+          Text = 'FireDel_SB'
+          OnClick = FireDel_SBClick
+        end
+      end
+      object FListBox: TListBox
+        Align = Client
+        Size.Width = 360.000000000000000000
+        Size.Height = 472.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 360.000000000000000000
+        Viewport.Height = 472.000000000000000000
+        object ListBoxGroupHeader1: TListBoxGroupHeader
+          Size.Width = 360.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'FireDac Query'
+        end
+      end
+    end
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 360.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label1: TLabel
+      Align = Contents
+      Size.Width = 360.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'SQLite Demo'
+    end
+  end
+  object SQLConnection1: TSQLConnection
+    DriverName = 'Sqlite'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverName=Sqlite'
+      'Database=D:\Delphi\1607\c2design5sh\7-2_SQLite\testdb.s3db'
+      '')
+    BeforeConnect = SQLConnection1BeforeConnect
+    Connected = True
+    Left = 32
+    Top = 160
+  end
+  object QueryI: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = SQLConnection1
+    Left = 104
+    Top = 160
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=D:\Delphi\1607\c2design5sh\7-2_SQLite\testdb.s3db'
+      'DriverID=SQLite')
+    LoginPrompt = False
+    BeforeConnect = FDConnection1BeforeConnect
+    Left = 232
+    Top = 161
+  end
+  object FDQueryI: TFDQuery
+    Connection = FDConnection1
+    Left = 312
+    Top = 161
+  end
+end
