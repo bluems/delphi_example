@@ -26,13 +26,9 @@ inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
       OnClick = btnOffClick
     end
   end
-  inherited Camera: TCameraComponent [3]
-  end
-  inherited Layout2: TLayout [4]
-    Align = Client
+  inherited Layout2: TLayout
     Size.Width = 450.000000000000000000
     Size.Height = 457.000000000000000000
-    Size.PlatformDefault = False
     inherited Image1: TImage
       MultiResBitmap.Height = 400
       MultiResBitmap.Width = 400
@@ -5239,10 +5235,8 @@ inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
             FF79639CDDEE66FA7EDAFE172B738E3BDC796C760000000049454E44AE426082}
           FileName = 'C:\Users\cie1_36\Pictures\image04.jpg'
         end>
-      Align = Client
       Size.Width = 450.000000000000000000
       Size.Height = 457.000000000000000000
-      Size.PlatformDefault = False
     end
   end
 end
