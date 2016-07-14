@@ -1,0 +1,224 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 687
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Image1: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = MostLeft
+    Height = 480.000000000000000000
+    Width = 457.000000000000000000
+  end
+  object Panel1: TPanel
+    Align = Client
+    Height = 480.000000000000000000
+    Width = 230.000000000000000000
+    TabOrder = 1
+    object GroupBox1: TGroupBox
+      Height = 81.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      Text = 'center'
+      Width = 89.000000000000000000
+      TabOrder = 0
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Text = '100'
+        Position.X = 8.000000000000000000
+        Position.Y = 21.000000000000000000
+        Width = 81.000000000000000000
+        Height = 22.000000000000000000
+      end
+      object Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Text = '200'
+        Position.X = 8.000000000000000000
+        Position.Y = 56.000000000000000000
+        Width = 81.000000000000000000
+        Height = 22.000000000000000000
+      end
+      object Label1: TLabel
+        Height = 17.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Text = 'x'
+        Width = 120.000000000000000000
+      end
+      object Label2: TLabel
+        Height = 17.000000000000000000
+        Position.X = 1.000000000000000000
+        Position.Y = 40.000000000000000000
+        Text = 'y'
+        Width = 120.000000000000000000
+      end
+    end
+    object GroupBox2: TGroupBox
+      Height = 81.000000000000000000
+      Position.X = 128.000000000000000000
+      Position.Y = 16.000000000000000000
+      Text = 'RATIDUS'
+      Width = 97.000000000000000000
+      TabOrder = 1
+      object Edit3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Text = '100'
+        Position.X = 8.000000000000000000
+        Position.Y = 21.000000000000000000
+        Width = 81.000000000000000000
+        Height = 22.000000000000000000
+      end
+      object Edit4: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Text = '120'
+        Position.X = 8.000000000000000000
+        Position.Y = 56.000000000000000000
+        Width = 81.000000000000000000
+        Height = 22.000000000000000000
+      end
+      object Label3: TLabel
+        Height = 17.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Text = 'x'
+        Width = 120.000000000000000000
+      end
+      object Label4: TLabel
+        Height = 17.000000000000000000
+        Position.X = 1.000000000000000000
+        Position.Y = 40.000000000000000000
+        Text = 'y'
+        Width = 120.000000000000000000
+      end
+    end
+    object GroupBox3: TGroupBox
+      Height = 105.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 96.000000000000000000
+      Text = 'angel'
+      Width = 201.000000000000000000
+      TabOrder = 2
+      object Edit5: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Text = '100'
+        Position.X = 8.000000000000000000
+        Position.Y = 21.000000000000000000
+        Width = 137.000000000000000000
+        Height = 22.000000000000000000
+      end
+      object Edit6: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Text = '-90'
+        Position.X = 8.000000000000000000
+        Position.Y = 64.000000000000000000
+        Width = 137.000000000000000000
+        Height = 22.000000000000000000
+      end
+      object Label5: TLabel
+        Height = 17.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Text = 'start angel'
+        Width = 120.000000000000000000
+      end
+      object Label6: TLabel
+        Height = 17.000000000000000000
+        Position.X = 9.000000000000000000
+        Position.Y = 48.000000000000000000
+        Text = 'sweep angel'
+        Width = 120.000000000000000000
+      end
+    end
+    object GroupBox4: TGroupBox
+      Height = 89.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 200.000000000000000000
+      Text = 'Color'
+      Width = 201.000000000000000000
+      TabOrder = 3
+      object Label7: TLabel
+        Height = 17.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Text = 'stroke color'
+        Width = 120.000000000000000000
+      end
+      object Label8: TLabel
+        Height = 17.000000000000000000
+        Position.X = 1.000000000000000000
+        Position.Y = 40.000000000000000000
+        Text = 'fill color'
+        Width = 120.000000000000000000
+      end
+      object ComboColorBox1: TComboColorBox
+        Color = claBlue
+        Height = 22.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 24.000000000000000000
+        TabOrder = 2
+        Width = 177.000000000000000000
+      end
+      object ComboColorBox2: TComboColorBox
+        Color = claTurquoise
+        Height = 22.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 56.000000000000000000
+        TabOrder = 3
+        Width = 177.000000000000000000
+      end
+    end
+    object GroupBox5: TGroupBox
+      Height = 81.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 288.000000000000000000
+      Text = 'opacity'
+      Width = 201.000000000000000000
+      TabOrder = 4
+      object Edit7: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Text = '100'
+        Position.X = 16.000000000000000000
+        Position.Y = 21.000000000000000000
+        Width = 169.000000000000000000
+        Height = 22.000000000000000000
+      end
+    end
+    object Button1: TButton
+      Align = MostBottom
+      Height = 22.000000000000000000
+      Position.Y = 458.000000000000000000
+      TabOrder = 5
+      Text = 'fILL'
+      Width = 230.000000000000000000
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Align = MostBottom
+      Height = 22.000000000000000000
+      Position.Y = 436.000000000000000000
+      TabOrder = 6
+      Text = 'Draw'
+      Width = 230.000000000000000000
+      OnClick = Button2Click
+    end
+  end
+end

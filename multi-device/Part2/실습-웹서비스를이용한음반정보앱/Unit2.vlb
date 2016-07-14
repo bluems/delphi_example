@@ -1,0 +1,15 @@
+﻿[RESTRequest1]
+Coordinates=116,10,88,123
+
+[RESTClient1]
+Coordinates=214,10,76,69
+
+[FDMemTable1]
+Coordinates=300,10,84,51
+
+[RESTResponse1]
+Coordinates=10,10,96,285
+
+[RESTResponseDataSetAdapter1]
+Coordinates=10,305,174,33
+

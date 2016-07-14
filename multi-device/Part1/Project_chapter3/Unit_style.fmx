@@ -1,0 +1,109 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 453
+  ClientWidth = 570
+  StyleBook = StyleBook1
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object ListBox1: TListBox
+    Height = 425.000000000000000000
+    Position.X = 336.000000000000000000
+    Position.Y = 16.000000000000000000
+    TabOrder = 0
+    Width = 217.000000000000000000
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+  end
+  object Button1: TButton
+    Height = 33.000000000000000000
+    Position.X = 32.000000000000000000
+    Position.Y = 24.000000000000000000
+    TabOrder = 1
+    Text = 'LoadStyle'
+    Width = 201.000000000000000000
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Height = 33.000000000000000000
+    Position.X = 32.000000000000000000
+    Position.Y = 64.000000000000000000
+    TabOrder = 2
+    Text = 'To Red'
+    Width = 201.000000000000000000
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Height = 33.000000000000000000
+    Position.X = 32.000000000000000000
+    Position.Y = 104.000000000000000000
+    TabOrder = 3
+    Text = 'Custom Style'
+    Width = 201.000000000000000000
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Height = 33.000000000000000000
+    Position.X = 32.000000000000000000
+    Position.Y = 152.000000000000000000
+    TabOrder = 4
+    Text = 'Add List  Item'
+    Width = 201.000000000000000000
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Height = 33.000000000000000000
+    Position.X = 32.000000000000000000
+    Position.Y = 192.000000000000000000
+    TabOrder = 5
+    Text = 'Add List Items with Style'
+    Width = 201.000000000000000000
+    OnClick = Button5Click
+  end
+  object Label1: TLabel
+    Height = 17.000000000000000000
+    Position.X = 264.000000000000000000
+    Position.Y = 40.000000000000000000
+    Text = 'Label1'
+    Width = 65.000000000000000000
+  end
+  object Text1: TText
+    Height = 33.000000000000000000
+    Position.X = 256.000000000000000000
+    Position.Y = 64.000000000000000000
+    Text = 'Text1'
+    Width = 65.000000000000000000
+    OnClick = Text1Click
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 24
+    Top = 424
+  end
+  object StyleBook1: TStyleBook
+    Left = 64
+    Top = 424
+    ResourcesBin = {
+      464D585F5354594C4520322E350106084E65775374796C65036A010054504630
+      07544C61796F757400095374796C654E616D6506084E65775374796C65064865
+      6967687405000000000000009405400A506F736974696F6E2E58050000000000
+      0000F506400A506F736974696F6E2E5905000000000000008407400557696474
+      6805000000000000008D0740085461624F726465720200000654496D61676500
+      095374796C654E616D650609496D6167654974656D0E4D756C74695265734269
+      746D61700E010000064865696768740500000000000000D804400A506F736974
+      696F6E2E5805000000000000009002400A506F736974696F6E2E590500000000
+      00000090024005576964746805000000000000009C0540000005545465787400
+      095374796C654E616D650608546578744974656D064865696768740500000000
+      000000E004400A506F736974696F6E2E580500000000000000BC05400A506F73
+      6974696F6E2E590500000000000000E001400557696474680500000000000000
+      B30640000000}
+  end
+end

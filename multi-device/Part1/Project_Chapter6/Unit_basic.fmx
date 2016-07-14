@@ -1,0 +1,281 @@
+object Form5: TForm5
+  Left = 0
+  Top = 0
+  Caption = 'Form5'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  OnCreate = FormCreate
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 2
+  DesignerOSVersion = ''
+  object TabControl1: TTabControl
+    Align = alClient
+    FullSize = True
+    Height = 567.000000000000000000
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 0
+    Width = 384.000000000000000000
+    object TabItem1: TTabItem
+      WordWrap = False
+      Height = 49.000000000000000000
+      IsSelected = False
+      TabOrder = 0
+      Text = #51077#47141#52968#53944#47204
+      Trimming = ttCharacter
+      Width = 192.000000000000000000
+      object ListBox1: TListBox
+        Anchors = [akLeft, akTop, akRight]
+        Height = 169.000000000000000000
+        Position.X = 16.000000000000000000
+        Position.Y = 16.000000000000000000
+        StyleLookup = 'transparentlistboxstyle'
+        TabOrder = 0
+        Width = 353.000000000000000000
+        DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        GroupingKind = gsGrouped
+        object ListBoxGroupHeader1: TListBoxGroupHeader
+          Height = 30.000000000000000000
+          StyleLookup = 'listboxgroupheader'
+          Text = #44368#50977#44284#51221
+          Width = 313.000000000000000000
+        end
+        object ListBoxItem1: TListBoxItem
+          Height = 44.000000000000000000
+          ItemData.Detail = '4'#51068
+          ItemData.Accessory = aDetail
+          ItemData.Bitmap.PNG = {
+            89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+            F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            0160494441545847ED9661B283200C84B517939BD5DE0C4FE66303DB5247346B
+            75FCF3BE19265631595683EDEEA62FD1CB5CE216524E65F23C8EA31D84102CD6
+            C4182D9639EEBC92001661ACA1A812AF1180D5ADAD9E40D8950E007B07506818
+            866E9AA6A5F540CAA90A00EF47411140B59E3C4A9441F13A1EE5B000AE9CF128
+            FF0EDCEE800AF68219A44EF88A388FEB799A1F791FA85B90FCD28ACA236816E7
+            EF725D76C183594DBB097FD71103F3F36DE7F04ECC227B1103F7E5DBB7D97B5E
+            486607B0B9E76CA46EDC39A76BCA3BE17A074258147FBD9AEBC33CCC3F836225
+            DA0BEB4A23599C3E7B39F25C738CAE47E1EC82B4620CB8F07CE6D84C5BE63AD1
+            764214A5FD3D0B2D8786260045CD01BD500B4D0040F139893889CD1649581B86
+            905B5121C6705E1B5EC99E034076C1BB7AE01100BE447CFE007FE039A538F00A
+            002602ACB981C240FD242B02806D3F1452530A0329A72A80ACED834773DD49D7
+            FD01AF9E1F8C04598ACB0000000049454E44AE426082}
+          Position.Y = 30.000000000000000000
+          StyleLookup = 'listboxitembottomdetail'
+          Text = #45944#54028#51060#44592#48376
+          Width = 313.000000000000000000
+        end
+        object ListBoxItem2: TListBoxItem
+          Height = 44.000000000000000000
+          ItemData.Detail = '3'#51068
+          Position.Y = 74.000000000000000000
+          StyleLookup = 'listboxitembottomdetail'
+          Text = #45944#54028#51060#44256#44553
+          Width = 313.000000000000000000
+        end
+        object ListBoxItem3: TListBoxItem
+          Height = 44.000000000000000000
+          ItemData.Detail = '4'#51068
+          Position.Y = 118.000000000000000000
+          StyleLookup = 'listboxitembottomdetail'
+          Text = #45936#51060#53552#48288#51060#49828#44284#51221
+          Width = 313.000000000000000000
+        end
+      end
+      object ListBox2: TListBox
+        Anchors = [akLeft, akTop, akRight]
+        Height = 129.000000000000000000
+        Position.X = 24.000000000000000000
+        Position.Y = 192.000000000000000000
+        TabOrder = 1
+        Width = 329.000000000000000000
+        DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        object ListBoxItem4: TListBoxItem
+          Height = 44.000000000000000000
+          StyleLookup = 'listboxitemnodetail'
+          Text = 'ListBoxItem4'
+          Width = 324.000000000000000000
+          object CalendarEdit1: TCalendarEdit
+            Touch.InteractiveGestures = [igLongTap, igDoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            TabOrder = 0
+            Cursor = crIBeam
+            Date = 41577.000000000000000000
+            Height = 32.000000000000000000
+            Position.X = 144.000000000000000000
+            Position.Y = 8.000000000000000000
+            Width = 164.000000000000000000
+          end
+        end
+        object ListBoxItem5: TListBoxItem
+          Height = 44.000000000000000000
+          Position.Y = 44.000000000000000000
+          StyleLookup = 'listboxitemnodetail'
+          Text = 'ListBoxItem5'
+          Width = 324.000000000000000000
+          object Edit1: TEdit
+            Touch.InteractiveGestures = [igLongTap, igDoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            TabOrder = 0
+            KeyboardType = vktAlphabet
+            Position.X = 144.000000000000000000
+            Position.Y = 8.000000000000000000
+            Width = 164.000000000000000000
+            Height = 32.000000000000000000
+            KillFocusByReturn = False
+            OnChange = Edit1Change
+          end
+        end
+        object ListBoxItem6: TListBoxItem
+          Height = 44.000000000000000000
+          Position.Y = 88.000000000000000000
+          StyleLookup = 'listboxitemnodetail'
+          Text = 'ListBoxItem6'
+          Width = 324.000000000000000000
+          object ComboEdit1: TComboEdit
+            Touch.InteractiveGestures = [igLongTap, igDoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            TabOrder = 0
+            ItemHeight = 19.000000000000000000
+            ItemIndex = -1
+            Items.Strings = (
+              'A'
+              'B'
+              'C'
+              'D')
+            Position.X = 144.000000000000000000
+            Position.Y = 8.000000000000000000
+            Width = 164.000000000000000000
+            Height = 32.000000000000000000
+            KillFocusByReturn = False
+          end
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      WordWrap = False
+      Height = 49.000000000000000000
+      IsSelected = True
+      Position.X = 192.000000000000000000
+      TabOrder = 1
+      Text = #53485#44036#51060#46041
+      Trimming = ttCharacter
+      Width = 192.000000000000000000
+      object TabControl2: TTabControl
+        Touch.GestureManager = GestureManager1
+        Align = alClient
+        FullSize = True
+        Height = 518.000000000000000000
+        TabHeight = 49.000000000000000000
+        TabIndex = 0
+        TabOrder = 0
+        TabPosition = tpDots
+        Width = 384.000000000000000000
+        object TabItem3: TTabItem
+          WordWrap = False
+          Height = 8.000000000000000000
+          IsSelected = True
+          Position.X = 183.000000000000000000
+          Position.Y = 499.000000000000000000
+          StyleLookup = 'tabdotstyle'
+          TabOrder = 0
+          Text = 'TabItem3'
+          Trimming = ttCharacter
+          Width = 8.000000000000000000
+          object ToolBar1: TToolBar
+            Height = 48.000000000000000000
+            TabOrder = 0
+            Width = 384.000000000000000000
+            object Button1: TButton
+              Height = 48.000000000000000000
+              Position.X = 8.000000000000000000
+              Position.Y = 8.000000000000000000
+              StyleLookup = 'arrowrighttoolbuttonbordered'
+              TabOrder = 0
+              Text = 'Button1'
+              Trimming = ttCharacter
+              Width = 48.000000000000000000
+              OnClick = Button1Click
+            end
+          end
+          object ListView1: TListView
+            ItemAppearanceClassName = 'TListItemAppearance'
+            ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            Align = alClient
+            Height = 470.000000000000000000
+            TabOrder = 1
+            Width = 384.000000000000000000
+          end
+        end
+        object TabItem4: TTabItem
+          WordWrap = False
+          Height = 8.000000000000000000
+          IsSelected = False
+          Position.X = 193.000000000000000000
+          Position.Y = 499.000000000000000000
+          StyleLookup = 'tabdotstyle'
+          TabOrder = 1
+          Text = 'TabItem4'
+          Trimming = ttCharacter
+          Width = 8.000000000000000000
+          object ToolBar2: TToolBar
+            Height = 44.000000000000000000
+            TabOrder = 0
+            Width = 384.000000000000000000
+            object Button2: TButton
+              Height = 30.000000000000000000
+              Position.X = 272.000000000000000000
+              Position.Y = 8.000000000000000000
+              StyleLookup = 'arrowlefttoolbuttonbordered'
+              TabOrder = 0
+              Text = 'Button2'
+              Trimming = ttCharacter
+              Width = 33.000000000000000000
+              OnClick = Button2Click
+            end
+          end
+        end
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 32
+    Top = 401
+    object ChangeTabAction1: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItem3
+    end
+    object ChangeTabAction2: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItem4
+    end
+  end
+  object GestureManager1: TGestureManager
+    Left = 72
+    Top = 401
+    GestureData = <
+      item
+        Control = TabControl2
+        Collection = <
+          item
+            Action = ChangeTabAction1
+            GestureID = sgiLeft
+          end
+          item
+            Action = ChangeTabAction2
+            GestureID = sgiRight
+          end>
+      end>
+  end
+end

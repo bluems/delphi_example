@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{EE62F13A-FF80-4B5A-8372-3E01D2E07EFF}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ServerManager\TSeverManager.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Drawing_Canvas\TeClient.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TSeverManager">
+        <MSBuild Projects="ServerManager\TSeverManager.dproj"/>
+    </Target>
+    <Target Name="TSeverManager:Clean">
+        <MSBuild Projects="ServerManager\TSeverManager.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TSeverManager:Make">
+        <MSBuild Projects="ServerManager\TSeverManager.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TeClient">
+        <MSBuild Projects="Drawing_Canvas\TeClient.dproj"/>
+    </Target>
+    <Target Name="TeClient:Clean">
+        <MSBuild Projects="Drawing_Canvas\TeClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TeClient:Make">
+        <MSBuild Projects="Drawing_Canvas\TeClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TSeverManager;TeClient"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TSeverManager:Clean;TeClient:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TSeverManager:Make;TeClient:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

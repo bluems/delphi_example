@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{06430B19-F2BE-4328-828B-DD0F0D6AC808}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Mobile_사진\TeCamera.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Vcl_PC\VclModule.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TeCamera">
+        <MSBuild Projects="Mobile_사진\TeCamera.dproj"/>
+    </Target>
+    <Target Name="TeCamera:Clean">
+        <MSBuild Projects="Mobile_사진\TeCamera.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TeCamera:Make">
+        <MSBuild Projects="Mobile_사진\TeCamera.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VclModule">
+        <MSBuild Projects="Vcl_PC\VclModule.dproj"/>
+    </Target>
+    <Target Name="VclModule:Clean">
+        <MSBuild Projects="Vcl_PC\VclModule.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VclModule:Make">
+        <MSBuild Projects="Vcl_PC\VclModule.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TeCamera;VclModule"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TeCamera:Clean;VclModule:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TeCamera:Make;VclModule:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,31 @@
+object TabletMainForm: TTabletMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 840
+  ClientWidth = 601
+  FormFactor.Width = 320
+  FormFactor.Height = 1024
+  FormFactor.Devices = [dkiPad]
+  FormFamily = 'Main'
+  DesignerMobile = True
+  DesignerWidth = 601
+  DesignerHeight = 840
+  DesignerDeviceName = 'Google Nexus 7'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object ToolBar1: TToolBar
+    Height = 48.000000000000000000
+    TabOrder = 0
+    Width = 601.000000000000000000
+    object Text1: TText
+      Color = claBlack
+      Font.Size = 20.000000000000000000
+      Font.Style = [fsBold]
+      Height = 50.000000000000000000
+      Position.X = 152.000000000000000000
+      Text = 'Tablet Form'
+      Width = 313.000000000000000000
+    end
+  end
+end
