@@ -1,0 +1,124 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 320
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 320.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = Top
+    Sizes = (
+      320s
+      431s
+      320s
+      431s)
+    object TabItem1: TTabItem
+      Touch.GestureManager = GestureManager1
+      CustomIcon = <
+        item
+          Width = 32
+          Height = 32
+          PNG = {
+            89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+            F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            0215494441545847C5960B72C2300C4449A7F7829B01378393513DA37515F943
+            D2EFCE68FC93B46BD9311CFE1B8BB7BB70B95C1EDE6D606B5FCAB91708686C26
+            6C84376F77E376BB55FB0EA602D891CCA756381E8FDEEB634B458602146CADAC
+            4976BFDFBDD705C23789684090073EACC4A58DC65CB6ECA3F8D0DF8E480E4420
+            B21EB4861FF1F4B788187D322428671CCBAC335F9636CC34145FE24EA75399A3
+            0F8CBCB666ABE0776F33164B5244804CAC844064AC457221FAF6F0EAD1A89580
+            40C93249046BC460919CBE59C337FB0CA7E4B4B20862842860845D0F910811C5
+            99CBB2101DD9161401A6B4DE5659DEBD082004CCCBE2AE0197F17C3E97BEAAE0
+            6DCDEF9CEB4B981365200201F9483089ECE5902F887DD01CC19EF2912CFB6701
+            12384223A0F7BCF6123047355E3CC745D0ACB2AB238844BD20E674E6D15765CD
+            E51546F3409770C94E10B03BDDF208C6F8CB408CD7E505396FC6EA6130E7E715
+            3710382B5DAF028079045CAFD732D65A4F88CDB9CC31EA734CE22C288F45AEAF
+            2492FAB8E19B09A8E41110F42E9EBE86F82ED04AC45E01F5218A644AAC472622
+            BF0D40FE33115D01E6C44BB52A314995680627F1D12739F0B559D59F30A7FA67
+            C244D4E753A675D6A26FF6E98CB7A397388EE94B40F4710375EC3E5D0C7F0D2D
+            A894CA5A8D35574B188F08B8AFD66BBCC775315C780176E5DDAEC85F472D6F34
+            23A7DD85E111BCC08FEDF2CB8946BBFDAB23F8211C0E1F95E3F7F86F347F9400
+            00000049454E44AE426082}
+        end>
+      IsSelected = True
+      Size.Width = 160.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemcustom'
+      TabOrder = 0
+      Text = #53485#44036' '#51077#47141' '#52968#53944#47204
+    end
+    object TabItem2: TTabItem
+      Touch.GestureManager = GestureManager1
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 160.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #53485#44036' '#51060#46041
+      object SpeedButton1: TSpeedButton
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'arrowrighttoolbutton'
+        Text = 'SpeedButton1'
+      end
+      object SpeedButton2: TSpeedButton
+        Position.X = 272.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'arrowlefttoolbutton'
+        Text = 'SpeedButton2'
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 72
+    Top = 240
+    object ChangeTabAction1: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItem1
+    end
+    object ChangeTabAction2: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItem2
+    end
+  end
+  object GestureManager1: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 152
+    Top = 240
+    GestureData = <
+      item
+        Control = TabItem2
+        Collection = <
+          item
+            Action = ChangeTabAction1
+            GestureID = sgiLeft
+          end>
+      end
+      item
+        Control = TabItem1
+        Collection = <
+          item
+            Action = ChangeTabAction2
+            GestureID = sgiRight
+          end>
+      end>
+  end
+end
