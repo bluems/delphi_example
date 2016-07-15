@@ -1,0 +1,694 @@
+object Mainform: TMainform
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 320
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  OnVirtualKeyboardShown = FormVirtualKeyboardShown
+  OnVirtualKeyboardHidden = FormVirtualKeyboardHidden
+  DesignerMasterStyle = 3
+  object Layout_Main: TLayout
+    Align = Client
+    Size.Width = 320.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object RoundRect1: TRoundRect
+      Align = Center
+      HitTest = False
+      Opacity = 0.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      object FloatAnimation3: TFloatAnimation
+        Duration = 0.699999988079071100
+        OnFinish = FloatAnimation3Finish
+        PropertyName = 'Opacity'
+        StartValue = 0.000000000000000000
+        StopValue = 1.000000000000000000
+      end
+      object FloatAnimation4: TFloatAnimation
+        Duration = 0.699999988079071100
+        OnFinish = FloatAnimation4Finish
+        PropertyName = 'Opacity'
+        StartValue = 1.000000000000000000
+        StopValue = 0.000000000000000000
+      end
+      object Label_roundrect: TLabel
+        StyledSettings = [Family, Size]
+        Position.X = 120.000000000000000000
+        Position.Y = 27.000000000000000000
+        TextSettings.Font.StyleExt = {04040000000000000004000000}
+        TextSettings.FontColor = claAliceblue
+        TextSettings.HorzAlign = Center
+        Text = 'Label_roundrect'
+      end
+    end
+    object TabControl1: TTabControl
+      Align = Client
+      Size.Width = 320.000000000000000000
+      Size.Height = 432.000000000000000000
+      Size.PlatformDefault = False
+      TabHeight = 49.000000000000000000
+      TabIndex = 2
+      TabOrder = 1
+      TabPosition = None
+      Sizes = (
+        320s
+        432s
+        320s
+        432s
+        320s
+        432s
+        320s
+        432s
+        320s
+        432s
+        320s
+        432s
+        320s
+        432s)
+      object TabItem_Main: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItem_Main'
+        object Layout_Buttons: TLayout
+          Align = Client
+          Size.Width = 320.000000000000000000
+          Size.Height = 343.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object btn_5su: TButton
+            Align = Horizontal
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Position.Y = 168.000000000000000000
+            Size.Width = 280.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #50724#49688#54792' '#50948#52824' '#49345#49464' '#49444#47749
+          end
+          object btn_classify: TButton
+            Align = Horizontal
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Position.Y = 40.000000000000000000
+            Size.Width = 280.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = #49324#49345#51064' '#54032#48324
+          end
+          object btn_mind: TButton
+            Align = Horizontal
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Position.Y = 104.000000000000000000
+            Size.Width = 280.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Text = #49688#44221#52840' '#48393#49324#51088#51032' '#51221#49888
+          end
+          object btn_therapy_menu: TButton
+            Align = Horizontal
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Position.Y = 232.000000000000000000
+            Size.Width = 280.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            Text = #51656#48337#48324' '#49884#52840' '#48169#48277
+          end
+        end
+        object Layout_Title: TLayout
+          Align = Top
+          Size.Width = 320.000000000000000000
+          Size.Height = 89.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object Label1: TLabel
+            Align = Center
+            StyledSettings = [Family, FontColor]
+            Size.Width = 153.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000200000004000000}
+            TextSettings.HorzAlign = Center
+            Text = #49688#49888#44221#46973' '#54036#52404#51656
+          end
+          object Label2: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Margins.Left = 200.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Margins.Right = 30.000000000000000000
+            Position.X = 200.000000000000000000
+            Position.Y = 5.000000000000000000
+            RotationAngle = -10.000000000000000000
+            Size.Width = 90.000000000000000000
+            Size.Height = 28.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Lite Version'
+          end
+        end
+      end
+      object TabItem_classify_01: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItem_classify_01'
+        object btn_class_left: TButton
+          Tag = -1
+          Align = Top
+          Margins.Left = 20.000000000000000000
+          Margins.Top = 50.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Position.X = 20.000000000000000000
+          Position.Y = 50.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 70.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = #49324#49345#51064' '#54032#48324' - '#51340#49688
+        end
+        object btn_class_right: TButton
+          Tag = -2
+          Align = Center
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 70.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = #49324#49345#51064' '#54032#48324' - '#50864#49688
+        end
+        object btn_class_qna: TButton
+          Align = Bottom
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 80.000000000000000000
+          Position.X = 20.000000000000000000
+          Position.Y = 282.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 70.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = #49324#49345#51064' '#54032#48324' QnA'
+        end
+      end
+      object TabItem_5su_01: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItem_5su_01'
+        object btn_lung: TButton
+          Tag = 1
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 40.000000000000000000
+          Position.Y = 32.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          Text = #54224#44221#46973
+          OnClick = btn_lungClick
+        end
+        object btn_heart: TButton
+          Tag = 3
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 40.000000000000000000
+          Position.Y = 88.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = #49900#51109#44221#46973
+        end
+        object btn_nasal: TButton
+          Tag = 5
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 40.000000000000000000
+          Position.Y = 144.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = #48708#44221#46973
+        end
+        object btn_L_intestine: TButton
+          Tag = 7
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 40.000000000000000000
+          Position.Y = 200.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = #45824#51109#44221#46973
+        end
+        object btn_S_intestine: TButton
+          Tag = 9
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 40.000000000000000000
+          Position.Y = 256.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = #49548#51109#44221#46973
+        end
+        object btn_phlegm: TButton
+          Tag = 11
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 40.000000000000000000
+          Position.Y = 312.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = #45812#44221#46973
+        end
+        object btn_samcho: TButton
+          Tag = 8
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 184.000000000000000000
+          Position.Y = 200.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          Text = #49340#52488#44221#46973
+        end
+        object btn_stomach: TButton
+          Tag = 10
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 184.000000000000000000
+          Position.Y = 256.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+          Text = #50948#44221#46973
+        end
+        object btn_bladder: TButton
+          Tag = 12
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 184.000000000000000000
+          Position.Y = 312.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 8
+          Text = #48169#44305#44221#46973
+        end
+        object btn_simpo: TButton
+          Tag = 2
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 184.000000000000000000
+          Position.Y = 32.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 9
+          Text = #49900#54252#44221#46973
+        end
+        object btn_liver: TButton
+          Tag = 4
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 184.000000000000000000
+          Position.Y = 88.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 10
+          Text = #44036#44221#46973
+        end
+        object btn_nerve: TButton
+          Tag = 6
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 184.000000000000000000
+          Position.Y = 144.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 11
+          Text = #49888#44221#46973
+        end
+      end
+      object TabItem_therapy_01: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItem_therapy_01'
+        object btn_recipe_by_illness: TButton
+          Tag = -1
+          Align = Top
+          Margins.Left = 20.000000000000000000
+          Margins.Top = 50.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Position.X = 20.000000000000000000
+          Position.Y = 50.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 70.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = #51656#48337#48324' '#52376#48169
+        end
+        object btn_therapy_qna: TButton
+          Align = Bottom
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 80.000000000000000000
+          Position.X = 20.000000000000000000
+          Position.Y = 282.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 70.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = #49884#52840#48169#48277' QnA'
+        end
+        object btn_recipe_by_part: TButton
+          Tag = -2
+          Align = Center
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Size.Width = 280.000000000000000000
+          Size.Height = 70.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = #44284#48324' '#52376#48169
+        end
+      end
+      object TabItem_therapy_02: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItem_therapy_02'
+        object Layout7: TLayout
+          Align = Top
+          Size.Width = 320.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Edit_therapy: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Left
+            TabOrder = 0
+            Position.X = 20.000000000000000000
+            Position.Y = 20.000000000000000000
+            Margins.Left = 20.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+          end
+          object btn_therapy_search: TButton
+            Align = Client
+            Margins.Left = 20.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Margins.Bottom = 10.000000000000000000
+            Size.Width = 143.000000000000000000
+            Size.Height = 53.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = #44160#49353
+          end
+        end
+        object StringGrid1: TStringGrid
+          Align = Client
+          CanFocus = True
+          ClipChildren = True
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 310.000000000000000000
+          Size.Height = 349.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Viewport.Width = 310.000000000000000000
+          Viewport.Height = 317.000000000000000000
+        end
+      end
+      object TabItem_therapy_03: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItem_therapy_03'
+        object btn_part_internal: TButton
+          Position.X = 16.000000000000000000
+          Position.Y = 80.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = #45236#44284
+        end
+        object btn_part_eye: TButton
+          Tag = 4
+          Position.X = 16.000000000000000000
+          Position.Y = 176.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = #50504#44284
+        end
+        object btn_part_bone: TButton
+          Tag = 7
+          Position.X = 16.000000000000000000
+          Position.Y = 272.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = #51221#54805#50808#44284
+        end
+        object btn_part_mental: TButton
+          Tag = 6
+          Position.X = 216.000000000000000000
+          Position.Y = 176.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = #51221#49888#44284
+        end
+        object btn_part_nose: TButton
+          Tag = 5
+          Position.X = 117.000000000000000000
+          Position.Y = 176.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          Text = #51060#48708#51064#54980#44284
+        end
+        object btn_part_obgyn: TButton
+          Tag = 3
+          Position.X = 216.000000000000000000
+          Position.Y = 80.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          Text = #49328#48512#51064#44284
+        end
+        object btn_part_skin: TButton
+          Tag = 9
+          Position.X = 216.000000000000000000
+          Position.Y = 272.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+          Text = #54588#48512#44284
+        end
+        object btn_part_tooth: TButton
+          Tag = 8
+          Position.X = 117.000000000000000000
+          Position.Y = 272.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 8
+          Text = #52824#44284
+        end
+        object btn_part_urology: TButton
+          Tag = 2
+          Position.X = 117.000000000000000000
+          Position.Y = 80.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 9
+          Text = #48708#45544#44592#44284
+        end
+      end
+      object TabItem_Image: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItem_Image'
+        object Image1: TImage
+          MultiResBitmap = <
+            item
+            end>
+          Align = Client
+          Size.Width = 320.000000000000000000
+          Size.Height = 432.000000000000000000
+          Size.PlatformDefault = False
+          WrapMode = Stretch
+        end
+      end
+    end
+    object ToolBar1: TToolBar
+      Enabled = False
+      Size.Width = 320.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object FloatAnimation1: TFloatAnimation
+        Duration = 0.200000002980232200
+        PropertyName = 'Opacity'
+        StartValue = 0.000000000000000000
+        StopValue = 1.000000000000000000
+      end
+      object FloatAnimation2: TFloatAnimation
+        Duration = 0.200000002980232200
+        PropertyName = 'Size.Height'
+        StartValue = 0.000000000000000000
+        StopValue = 0.000000000000000000
+      end
+      object Btn_home: TButton
+        Align = Right
+        Position.X = 272.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'pagecurltoolbutton'
+        TabOrder = 0
+        Text = 'HOME'
+      end
+      object Btn_previous_tab: TButton
+        Align = Left
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'arrowlefttoolbutton'
+        TabOrder = 1
+        Text = 'BACK'
+      end
+      object Label_Title: TLabel
+        Align = Client
+        StyledSettings = [Family, FontColor]
+        Size.Width = 224.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.HorzAlign = Center
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 272
+    Top = 120
+    object ChangeTabAction1: TChangeTabAction
+      Category = 'Tab'
+    end
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 232
+    Top = 168
+  end
+  object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
+    Left = 264
+    Top = 168
+  end
+end
