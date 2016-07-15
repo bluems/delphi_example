@@ -1,9 +1,9 @@
-program prjFMX;
+program pCAll;
 
 uses
   System.StartUpCopy,
   FMX.Forms,
-  uCall in 'hanbun\Call\uCall.pas' {Form1};
+  uCall in 'uCall.pas' {Form1};
 
 {$R *.res}
 
