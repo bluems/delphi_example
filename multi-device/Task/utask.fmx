@@ -1,0 +1,127 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 320
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object ToolBar1: TToolBar
+    Size.Width = 320.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      Align = Contents
+      Size.Width = 320.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = #51089#50629#44288#47532
+    end
+    object Button1: TButton
+      Align = Right
+      Position.X = 264.000000000000000000
+      Size.Width = 56.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'addtoolbutton'
+      TabOrder = 1
+      Text = 'Button1'
+      OnClick = Button1Click
+    end
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Client
+    Size.Width = 320.000000000000000000
+    Size.Height = 440.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+    OnDeletingItem = ListView1DeletingItem
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=D:\Delphi\1607\TASKS.IB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'CharacterSet=UTF8'
+      'DriverID=IBLite')
+    LoginPrompt = False
+    BeforeConnect = FDConnection1BeforeConnect
+    Left = 152
+    Top = 144
+  end
+  object FDTable1: TFDTable
+    Connection = FDConnection1
+    UpdateOptions.UpdateTableName = 'TASK'
+    TableName = 'TASK'
+    Left = 152
+    Top = 224
+  end
+  object FDQueryInsert: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'insert into task (TaskName) values (:TaskName)')
+    Left = 240
+    Top = 152
+    ParamData = <
+      item
+        Name = 'TASKNAME'
+        DataType = ftWideString
+        ParamType = ptInput
+        Size = 200
+      end>
+  end
+  object FDQueryDelete: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'delete from task where TaskName=:TaskName')
+    Left = 240
+    Top = 224
+    ParamData = <
+      item
+        Name = 'TASKNAME'
+        ParamType = ptInput
+      end>
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 240
+    Top = 296
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDTable1
+    ScopeMappings = <>
+    Left = 232
+    Top = 88
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 156
+    Top = 85
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = ListView1
+      Track = True
+      FillDataSource = BindSourceDB1
+      FillDisplayFieldName = 'TASKNAME'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object FDPhysIBDriverLink1: TFDPhysIBDriverLink
+    Left = 144
+    Top = 304
+  end
+end
