@@ -3,13 +3,16 @@ unit MasterDetail_Phone;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, Data.Bind.GenData,
-  Fmx.Bind.GenData, Data.Bind.Components, Data.Bind.ObjectScope, FMX.Layouts,
+  FMX.Bind.GenData, Data.Bind.Components, Data.Bind.ObjectScope, FMX.Layouts,
   FMX.ListBox, FMX.StdCtrls, FMX.Graphics, FMX.TabControl, System.Rtti,
-  System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.EngExt,
-  Fmx.Bind.DBEngExt, FMX.Objects, FMX.Edit, System.Actions, FMX.ActnList,
-  FMX.ListView.Types, FMX.ListView;
+  System.Bindings.Outputs, FMX.Bind.Editors, Data.Bind.EngExt,
+  FMX.Bind.DBEngExt, FMX.Objects, FMX.Edit, System.Actions, FMX.ActnList,
+  FMX.ListView.Types, FMX.ListView, FMX.ListView.Appearances,
+  FMX.ListView.Adapters.Base, FMX.Controls.Presentation,
+  FMX.MediaLibrary.Actions, FMX.StdActns, Data.Bind.DBScope;
 
 type
   TPhoneMasterDetail = class(TForm)
@@ -20,14 +23,8 @@ type
     MasterLabel: TLabel;
     DetailToolbar: TToolBar;
     DetailLabel: TLabel;
-    PrototypeBindSource1: TPrototypeBindSource;
     BindingsList1: TBindingsList;
-    lblName: TLabel;
     imgContact: TImage;
-    LinkPropertyToFieldBitmap: TLinkPropertyToField;
-    LinkPropertyToFieldText: TLinkPropertyToField;
-    lblTitle: TLabel;
-    LinkPropertyToFieldText2: TLinkPropertyToField;
     BackButton: TSpeedButton;
     ActionList1: TActionList;
     ChangeTabAction1: TChangeTabAction;
@@ -35,17 +32,38 @@ type
     ListView1: TListView;
     LinkListControlToField2: TLinkListControlToField;
     ListBox1: TListBox;
+    btnAdd: TButton;
+    btnSave: TButton;
+    edtName: TEdit;
+    edtDept: TEdit;
     ListBoxItem1: TListBoxItem;
+    edtAge: TEdit;
     ListBoxItem2: TListBoxItem;
-    lblEmail: TLabel;
-    lblAge: TLabel;
-    LinkPropertyToFieldText3: TLinkPropertyToField;
-    LinkPropertyToFieldText4: TLinkPropertyToField;
+    edtEmail: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    TakePhotoFromCameraAction1: TTakePhotoFromCameraAction;
+    TakePhotoFromLibraryAction1: TTakePhotoFromLibraryAction;
+    BindSourceDB1: TBindSourceDB;
+    LinkControlToField1: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
+    LinkControlToField3: TLinkControlToField;
+    LinkControlToField4: TLinkControlToField;
+    LinkPropertyToFieldBitmap: TLinkPropertyToField;
     procedure ListView1ItemClick(const Sender: TObject;
       const AItem: TListViewItem);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
+    procedure TakePhotoFromCameraAction1DidFinishTaking(Image: TBitmap);
+    procedure TakePhotoFromLibraryAction1DidFinishTaking(Image: TBitmap);
+    procedure Button3Click(Sender: TObject);
+    procedure btnAddClick(Sender: TObject);
+    procedure btnSaveClick(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure BackButtonClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -57,8 +75,59 @@ var
 
 implementation
 
-
 {$R *.fmx}
+
+uses EmployeeDM;
+
+procedure TPhoneMasterDetail.BackButtonClick(Sender: TObject);
+begin
+  datamodule1.CancelData;
+
+  ChangeTabAction1.Tab := TabItem1;
+  ChangeTabAction1.ExecuteTarget(self);
+end;
+
+procedure TPhoneMasterDetail.btnAddClick(Sender: TObject);
+begin
+  datamodule1.NewData;
+
+  ChangeTabAction1.Tab := TabItem2;
+  ChangeTabAction1.ExecuteTarget(self);
+end;
+
+procedure TPhoneMasterDetail.btnSaveClick(Sender: TObject);
+var
+  Thumbnail: TBitmap;
+  ImgStream, ThumbStream: TMemoryStream;
+begin
+  ImgStream := TMemoryStream.Create;
+  ThumbStream := TMemoryStream.Create;
+  try
+    imgContact.Bitmap.SaveToStream(ImgStream);
+    Thumbnail := imgContact.Bitmap.CreateThumbnail(100, 100);
+    Thumbnail.SaveToStream(ThumbStream);
+    datamodule1.SaveData(ImgStream, ThumbStream);
+
+    ChangeTabAction1.Tab := TabItem1;
+    ChangeTabAction1.ExecuteTarget(self);
+  finally
+    ImgStream.Free;
+    ThumbStream.Free;
+  end;
+end;
+
+procedure TPhoneMasterDetail.Button3Click(Sender: TObject);
+begin
+  imgContact.Bitmap.Clear(TAlphaColorRec.Null);
+end;
+
+procedure TPhoneMasterDetail.Button4Click(Sender: TObject);
+begin
+  datamodule1.DeleteData;
+
+  ChangeTabAction1.Tab := TabItem1;
+  ChangeTabAction1.ExecuteTarget(self);
+end;
 
 procedure TPhoneMasterDetail.FormCreate(Sender: TObject);
 begin
@@ -78,7 +147,7 @@ begin
     if TabControl1.ActiveTab = TabItem2 then
     begin
       ChangeTabAction1.Tab := TabItem1;
-      ChangeTabAction1.ExecuteTarget(Self);
+      ChangeTabAction1.ExecuteTarget(self);
       Key := 0;
     end;
   end;
@@ -87,10 +156,22 @@ end;
 procedure TPhoneMasterDetail.ListView1ItemClick(const Sender: TObject;
   const AItem: TListViewItem);
 begin
-{ This triggers the slide animation }
+  { This triggers the slide animation }
   ChangeTabAction1.Tab := TabItem2;
-  ChangeTabAction1.ExecuteTarget(Self);
+  ChangeTabAction1.ExecuteTarget(self);
   ChangeTabAction1.Tab := TabItem1;
+end;
+
+procedure TPhoneMasterDetail.TakePhotoFromCameraAction1DidFinishTaking
+  (Image: TBitmap);
+begin
+  imgContact.Bitmap.Assign(Image);
+end;
+
+procedure TPhoneMasterDetail.TakePhotoFromLibraryAction1DidFinishTaking
+  (Image: TBitmap);
+begin
+  imgContact.Bitmap.Assign(Image);
 end;
 
 end.

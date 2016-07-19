@@ -1,36 +1,36 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
-  Height = 186
-  Width = 241
+  Height = 384
+  Width = 575
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=D:\Delphi\1607\multi-device\sawon\TESTDB.GDB'
+      'Database=testdb'
       'User_Name=sysdba'
       'Password=masterkey'
-      'CharacterSet=UTF8'
-      'DriverID=IB')
+      'Server=412lab.xyz'
+      'CharacterSet=utf8'
+      'DriverID=MySQL')
     Connected = True
     LoginPrompt = False
-    BeforeConnect = FDConnection1BeforeConnect
-    Left = 56
-    Top = 24
+    Left = 160
+    Top = 80
   end
   object FDQuery1: TFDQuery
     Active = True
     CachedUpdates = True
     Connection = FDConnection1
     SQL.Strings = (
-      'SELECT * FROM EMPLOYEES')
-    Left = 56
-    Top = 104
-  end
-  object FDPhysIBDriverLink1: TFDPhysIBDriverLink
-    Left = 152
-    Top = 104
+      'select * from employees')
+    Left = 368
+    Top = 72
   end
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'FMX'
-    Left = 144
-    Top = 24
+    Left = 272
+    Top = 176
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    Left = 168
+    Top = 216
   end
 end
