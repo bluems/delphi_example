@@ -37,34 +37,52 @@ uses
 {$R *.fmx}
 
 function GetAndroidCodename(VerString: string): string;
-var
-  iVer: single;
 begin
-  if TryStrToFloat(VerString, iVer) then  //문제가 있음.    boolean 0으로 떨어짐.
-  begin                                   //begin..end 통째로 안돌아감.
-    showmessage(floattostr(iVer));
-    if iVer >= 6.0 then
-      Result := '마시멜로'
-    else if iVer >= 5.0 then
-      Result := '롤리팝'
-    else if iVer >= 4.4 then
-      Result := 'KitKat'
-    else if iVer >= 4.1 then
-      Result := 'JellyBean'
-    else if iVer >= 4.0 then
-      Result := 'Icecream Sandwitch'
-    else if iVer >= 3.0 then
-      Result := 'Honey Com'
-    else if iVer >= 2.3 then
-      Result := 'Ginger Bread'
-    else if iVer >= 2.2 then
-      Result := 'Proyo'
-    else
-      Result := 'Unknown';
-  end
-  else
-    Result := floattostr(iver);
-    //showmessage(JStringToString(tjbuild_version.JavaClass.RELEASE));
+  if VerString = '1.0' then
+    Result := 'BASE'
+  else if VerString = '1.1' then
+    Result := 'BASE_1_1'
+  else if VerString = '1.5' then
+    Result := 'CUPCAKE'
+  else if VerString = '1.6' then
+    Result := 'DONUT'
+  else if VerString = '2.0' then
+    Result := 'ECLAIR'
+  else if VerString = '2.0.1' then
+    Result := 'ECLAIR_0_1'
+  else if VerString = '2.1' then
+    Result := 'ECLAIR_MR1'
+  else if VerString = '2.2' then
+    Result := 'FROYO'
+  else if VerString = '2.3' then
+    Result := 'GINGERBREAD'
+  else if VerString = '2.3.3' then
+    Result := 'GINGERBREAD_MR1'
+  else if VerString = '3.0' then
+    Result := 'HONEYCOMB'
+  else if VerString = '3.1' then
+    Result := 'HONEYCOMB_MR1'
+  else if VerString = '3.2' then
+    Result := 'HONEYCOMB_MR2'
+  else if VerString = '4.0' then
+    Result := 'ICE_CREAM_SANDWICH'
+  else if VerString = '4.0.3' then
+    Result := 'ICE_CREAM_SANDWICH_MR1'
+  else if VerString = '4.1' then
+    Result := 'JELLY_BEAN'
+  else if VerString = '4.2' then
+    Result := 'JELLY_BEAN_MR1'
+  else if VerString = '4.3' then
+    Result := 'JELLY_BEAN_MR2'
+  else if Pos('4.4',VerString) = 1 then
+    Result := 'KITKAT'
+  else if (Pos('5.0',VerString) = 1) or (Pos('5.1',VerString) = 1) then
+    Result:= 'JellyBean'
+  else if Pos('6.0',VerString) = 1 then
+    Result:= 'MarshMallow'
+  else if Pos('7.0',VerString)=1 then
+    Result:='Nougat'
+  else Result := 'UNKNOWN';
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);

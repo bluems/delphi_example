@@ -1,0 +1,12 @@
+﻿[FDQuery1]
+Coordinates=10,10,70,177
+
+[FDPhysIBDriverLink1]
+Coordinates=82,1,119,33
+
+[FDGUIxWaitCursor1]
+Coordinates=220,1,113,33
+
+[FDConnection1]
+Coordinates=220,53,90,33
+
