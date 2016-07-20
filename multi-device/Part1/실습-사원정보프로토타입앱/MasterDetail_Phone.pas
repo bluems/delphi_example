@@ -12,7 +12,9 @@ uses
   FMX.Bind.DBEngExt, FMX.Objects, FMX.Edit, System.Actions, FMX.ActnList,
   FMX.ListView.Types, FMX.ListView, FMX.ListView.Appearances,
   FMX.ListView.Adapters.Base, FMX.Controls.Presentation,
-  FMX.MediaLibrary.Actions, FMX.StdActns, Data.Bind.DBScope;
+  FMX.MediaLibrary.Actions, FMX.StdActns, Data.Bind.DBScope, Data.DBXDataSnap,
+  Data.DBXCommon, IPPeerClient, Data.DB, Datasnap.DBClient, Datasnap.DSConnect,
+  Data.SqlExpr;
 
 type
   TPhoneMasterDetail = class(TForm)
@@ -23,14 +25,12 @@ type
     MasterLabel: TLabel;
     DetailToolbar: TToolBar;
     DetailLabel: TLabel;
-    BindingsList1: TBindingsList;
     imgContact: TImage;
     BackButton: TSpeedButton;
     ActionList1: TActionList;
     ChangeTabAction1: TChangeTabAction;
     ChangeTabAction2: TChangeTabAction;
     ListView1: TListView;
-    LinkListControlToField2: TLinkListControlToField;
     ListBox1: TListBox;
     btnAdd: TButton;
     btnSave: TButton;
@@ -46,7 +46,12 @@ type
     Button4: TButton;
     TakePhotoFromCameraAction1: TTakePhotoFromCameraAction;
     TakePhotoFromLibraryAction1: TTakePhotoFromLibraryAction;
+    SQLConnection1: TSQLConnection;
+    DSProviderConnection1: TDSProviderConnection;
+    ClientDataSet1: TClientDataSet;
     BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkListControlToField1: TLinkListControlToField;
     LinkControlToField1: TLinkControlToField;
     LinkControlToField2: TLinkControlToField;
     LinkControlToField3: TLinkControlToField;
@@ -65,9 +70,12 @@ type
     procedure Button4Click(Sender: TObject);
     procedure BackButtonClick(Sender: TObject);
   private
+
     { Private declarations }
   public
     { Public declarations }
+    procedure SaveData(AImage, AThumbnail: TStream);
+    procedure DeleteData;
   end;
 
 var
@@ -77,11 +85,13 @@ implementation
 
 {$R *.fmx}
 
-uses EmployeeDM;
+//uses EmployeeDM;
 
 procedure TPhoneMasterDetail.BackButtonClick(Sender: TObject);
 begin
-  datamodule1.CancelData;
+  //datamodule1.CancelData;
+  if clientdataset1.UpdateStatus = tupdatestatus.usInserted then
+    clientdataset1.Cancel;
 
   ChangeTabAction1.Tab := TabItem1;
   ChangeTabAction1.ExecuteTarget(self);
@@ -89,7 +99,8 @@ end;
 
 procedure TPhoneMasterDetail.btnAddClick(Sender: TObject);
 begin
-  datamodule1.NewData;
+  clientdataset1.Append;
+  //clientdataset1.Insert;
 
   ChangeTabAction1.Tab := TabItem2;
   ChangeTabAction1.ExecuteTarget(self);
@@ -106,7 +117,7 @@ begin
     imgContact.Bitmap.SaveToStream(ImgStream);
     Thumbnail := imgContact.Bitmap.CreateThumbnail(100, 100);
     Thumbnail.SaveToStream(ThumbStream);
-    datamodule1.SaveData(ImgStream, ThumbStream);
+    SaveData(ImgStream, ThumbStream);
 
     ChangeTabAction1.Tab := TabItem1;
     ChangeTabAction1.ExecuteTarget(self);
@@ -123,7 +134,7 @@ end;
 
 procedure TPhoneMasterDetail.Button4Click(Sender: TObject);
 begin
-  datamodule1.DeleteData;
+  DeleteData;
 
   ChangeTabAction1.Tab := TabItem1;
   ChangeTabAction1.ExecuteTarget(self);
@@ -160,6 +171,40 @@ begin
   ChangeTabAction1.Tab := TabItem2;
   ChangeTabAction1.ExecuteTarget(self);
   ChangeTabAction1.Tab := TabItem1;
+end;
+
+procedure TPhoneMasterDetail.SaveData(AImage, AThumbnail: TStream);
+begin
+  if clientdataset1.UpdateStatus = TUpdateStatus.usUnmodified then
+    clientdataset1.Edit;
+
+  if clientdataset1.UpdateStatus = Tupdatestatus.usInserted then
+    clientdataset1.FieldByName('emp_no').AsInteger :=0;
+
+  (clientdataset1.FieldByName('emp_image') as TBlobfield).LoadFromStream(AImage);
+  (clientdataset1.FieldByName('emp_thumb') as TBlobfield).LoadFromStream(AThumbnail);
+
+  clientdataset1.Post;
+
+  clientdataset1.ApplyUpdates(-1);
+
+  clientdataset1.Refresh;
+end;
+
+procedure TPhoneMasterDetail.DeleteData;
+begin
+  if clientdataset1.UpdateStatus = TUpdatestatus.usInserted then
+  begin
+    clientdataset1.Cancel;
+  end
+  else if clientdataset1.UpdateStatus = Tupdatestatus.usUnmodified then
+  begin
+    clientdataset1.Delete;
+    clientdataset1.post;
+    clientdataset1.ApplyUpdates(-1);
+
+    clientdataset1.Refresh;
+  end;
 end;
 
 procedure TPhoneMasterDetail.TakePhotoFromCameraAction1DidFinishTaking

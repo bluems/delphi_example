@@ -17,7 +17,7 @@ object PhoneMasterDetail: TPhoneMasterDetail
     Size.Height = 567.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 0
     TabPosition = None
     Sizes = (
@@ -29,7 +29,7 @@ object PhoneMasterDetail: TPhoneMasterDetail
       CustomIcon = <
         item
         end>
-      IsSelected = True
+      IsSelected = False
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -84,7 +84,7 @@ object PhoneMasterDetail: TPhoneMasterDetail
       CustomIcon = <
         item
         end>
-      IsSelected = False
+      IsSelected = True
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -136,16 +136,25 @@ object PhoneMasterDetail: TPhoneMasterDetail
       object imgContact: TImage
         MultiResBitmap = <
           item
-            Width = 150
-            Height = 150
+            Width = 100
+            Height = 100
             PNG = {
-              89504E470D0A1A0A0000000D49484452000000960000009608060000003C0171
-              E2000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
-              006E49444154785EEDC13101000000C2A0F54F6D0B2F20000000000000000000
-              0000000000000000000000000000000000000000000000000000000000000000
-              0000000000000000000000000000000000000000000000000000000000000000
-              00000000000000000000000000006E6A60350001102810B60000000049454E44
-              AE426082}
+              89504E470D0A1A0A0000000D494844520000006400000064080600000070E295
+              54000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              01A749444154785EEDDB416A8440104051F5005EC01B7884B9BBD7F00042E3BA
+              C18D2B0743652B8149C8D7FA6F63CF523E653724DDD65A8F524AF334E338B6B1
+              BCB42CCBB16D5BFCFA7FDDBEEFB11441771C472C73A2BD7FFA20345D3C05913E
+              08EE9315CFB40CA24B6EEA304E088C4160D20799A629560CE983BC5EAF5831B8
+              A9C3B887C03821304E088C4160DA52CA516B8D9FCFF1D3BF18D23821300681F1
+              9405E384C01804C62030068131088C41603CF6C238213006813108CD793F2496
+              299DF7436289E0FD1098F4A72CDAFB7BEC85715387491F04F7C98A675A06D125
+              3775182704C62030E983783F04C6FB21BAE41E02E384C03821305FD7118661B8
+              E5BFEEFF86799E599F8833482C05E0270BC620309EB2609C101883C01804C620
+              30068131088CC75E182704C620300681E9FABE8FE57D7D72C7C5FB217FE04977
+              5C1E71CAFAE41D68EF9F3E088D9B3A4CFA20B84F563CD332882EB9A9C3382130
+              0681491F84763FA459D7F5F61FE027BCC337377518F710182704C6098131088C
+              41600C026310184F59304E088C41600C0263101883C01804C6632F8C13026310
+              18834892F4084DF30602CEB926F74E5B780000000049454E44AE426082}
           end
           item
             Scale = 2.000000000000000000
@@ -157,9 +166,12 @@ object PhoneMasterDetail: TPhoneMasterDetail
         Size.PlatformDefault = False
       end
       object ListBox1: TListBox
-        Position.X = 16.000000000000000000
+        Align = Horizontal
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
         Position.Y = 232.000000000000000000
-        Size.Width = 353.000000000000000000
+        Size.Width = 344.000000000000000000
         Size.Height = 121.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = 'transparentlistboxstyle'
@@ -168,7 +180,7 @@ object PhoneMasterDetail: TPhoneMasterDetail
         DefaultItemStyles.ItemStyle = ''
         DefaultItemStyles.GroupHeaderStyle = ''
         DefaultItemStyles.GroupFooterStyle = ''
-        Viewport.Width = 353.000000000000000000
+        Viewport.Width = 344.000000000000000000
         Viewport.Height = 121.000000000000000000
         object ListBoxItem1: TListBoxItem
           TabOrder = 0
@@ -179,7 +191,7 @@ object PhoneMasterDetail: TPhoneMasterDetail
             TabOrder = 0
             Text = '53'
             TextSettings.HorzAlign = Trailing
-            Position.X = 253.000000000000000000
+            Position.X = 244.000000000000000000
             Position.Y = 6.000000000000000000
             Size.Width = 100.000000000000000000
             Size.Height = 32.000000000000000000
@@ -196,7 +208,7 @@ object PhoneMasterDetail: TPhoneMasterDetail
             Align = Right
             TabOrder = 0
             TextSettings.HorzAlign = Trailing
-            Position.X = 153.000000000000000000
+            Position.X = 144.000000000000000000
             Position.Y = 6.000000000000000000
             Size.Width = 200.000000000000000000
             Size.Height = 32.000000000000000000
@@ -279,24 +291,84 @@ object PhoneMasterDetail: TPhoneMasterDetail
       end
     end
   end
+  object ActionList1: TActionList
+    Left = 320
+    Top = 512
+    object ChangeTabAction1: TChangeTabAction
+      CustomText = ' Back'
+      Tab = TabItem1
+    end
+    object ChangeTabAction2: TChangeTabAction
+      CustomText = 'Back'
+      Tab = TabItem1
+    end
+    object TakePhotoFromCameraAction1: TTakePhotoFromCameraAction
+      Category = 'Media Library'
+      OnDidFinishTaking = TakePhotoFromCameraAction1DidFinishTaking
+    end
+    object TakePhotoFromLibraryAction1: TTakePhotoFromLibraryAction
+      Category = 'Media Library'
+      OnDidFinishTaking = TakePhotoFromLibraryAction1DidFinishTaking
+    end
+  end
+  object SQLConnection1: TSQLConnection
+    DriverName = 'DataSnap'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DBXDataSnap'
+      'HostName=localhost'
+      'Port=2110'
+      'CommunicationProtocol=tcp/ip'
+      'DatasnapContext=datasnap/'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXClientDriverLoader,Borland' +
+        '.Data.DbxClientDriver,Version=24.0.0.0,Culture=neutral,PublicKey' +
+        'Token=91d62ebb5b0d1b1b'
+      'Filters={}')
+    Connected = True
+    Left = 80
+    Top = 512
+  end
+  object DSProviderConnection1: TDSProviderConnection
+    ServerClassName = 'TServerMethods1'
+    Connected = True
+    SQLConnection = SQLConnection1
+    Left = 216
+    Top = 456
+  end
+  object ClientDataSet1: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider1'
+    RemoteServer = DSProviderConnection1
+    Left = 136
+    Top = 448
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = ClientDataSet1
+    ScopeMappings = <>
+    Left = 176
+    Top = 272
+  end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 260
-    Top = 517
-    object LinkListControlToField2: TLinkListControlToField
+    Left = 44
+    Top = 5
+    object LinkListControlToField1: TLinkListControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1
       FieldName = 'emp_name'
       Control = ListView1
       FillExpressions = <
         item
-          SourceMemberName = 'emp_dept'
-          ControlMemberName = 'Detail'
-        end
-        item
           SourceMemberName = 'emp_thumb'
           ControlMemberName = 'Bitmap'
+        end
+        item
+          SourceMemberName = 'emp_dept'
+          ControlMemberName = 'Detail'
         end>
       FillHeaderExpressions = <>
       FillBreakGroups = <>
@@ -336,31 +408,5 @@ object PhoneMasterDetail: TPhoneMasterDetail
       Component = imgContact
       ComponentProperty = 'Bitmap'
     end
-  end
-  object ActionList1: TActionList
-    Left = 320
-    Top = 512
-    object ChangeTabAction1: TChangeTabAction
-      CustomText = ' Back'
-      Tab = TabItem1
-    end
-    object ChangeTabAction2: TChangeTabAction
-      CustomText = 'Back'
-      Tab = TabItem1
-    end
-    object TakePhotoFromCameraAction1: TTakePhotoFromCameraAction
-      Category = 'Media Library'
-      OnDidFinishTaking = TakePhotoFromCameraAction1DidFinishTaking
-    end
-    object TakePhotoFromLibraryAction1: TTakePhotoFromLibraryAction
-      Category = 'Media Library'
-      OnDidFinishTaking = TakePhotoFromLibraryAction1DidFinishTaking
-    end
-  end
-  object BindSourceDB1: TBindSourceDB
-    DataSet = DataModule1.FDQuery1
-    ScopeMappings = <>
-    Left = 176
-    Top = 272
   end
 end

@@ -3,99 +3,105 @@ Coordinates=180,10,125,195
 Visible=True
 
 [TabControl1]
-Coordinates=291,365,85,36
+Coordinates=291,365,74,33
 
 [TabItem1]
-Coordinates=206,365,69,36
+Coordinates=206,365,59,33
 
 [TabItem2]
-Coordinates=121,365,69,36
-
-[BindingsList1]
-Coordinates=172,241,91,36
+Coordinates=121,365,59,33
 
 []
-Coordinates=547,1,79,33
+Coordinates=172,241,82,33
 
 [ActionList1]
-Coordinates=154,206,78,36
+Coordinates=154,206,70,33
 
 [ChangeTabAction1]
-Coordinates=154,206,124,36
+Coordinates=154,206,108,33
 
 [ChangeTabAction2]
-Coordinates=154,206,124,36
+Coordinates=154,206,108,33
 
 [BackButton]
-Coordinates=310,210,80,58
+Coordinates=310,210,72,51
 
 [DetailLabel]
-Coordinates=140,210,79,58
+Coordinates=140,210,69,51
 
 [DetailToolbar]
-Coordinates=418,198,91,36
+Coordinates=418,198,80,33
 
 [MasterToolbar]
-Coordinates=10,365,97,36
+Coordinates=10,365,85,33
 
 [MasterLabel]
-Coordinates=220,210,85,58
+Coordinates=220,210,74,51
 
 [imgContact]
-Coordinates=10,50,80,58
+Coordinates=930,570,70,51
 
 [ListView1]
-Coordinates=10,120,107,234
+Coordinates=460,350,89,195
 
 [ListBox1]
-Coordinates=361,420,139,212
+Coordinates=60,410,116,177
 
 [edtAge]
-Coordinates=175,78,55,58
+Coordinates=980,420,49,51
 
 [btnAdd]
-Coordinates=272,535,55,58
+Coordinates=272,535,50,51
 
 [Button1]
-Coordinates=175,1,59,58
+Coordinates=175,1,53,51
 
 [Button3]
-Coordinates=78,1,59,58
+Coordinates=78,1,53,51
 
 [edtName]
-Coordinates=272,1,66,58
+Coordinates=960,270,57,51
 
 [Button4]
-Coordinates=0,0,59,58
+Coordinates=0,0,53,51
 
 [edtDept]
-Coordinates=343,1,60,58
+Coordinates=970,350,52,51
 
 [Button2]
-Coordinates=343,287,59,58
+Coordinates=343,287,53,51
 
 [TakePhotoFromLibraryAction1]
-Coordinates=443,1,189,36
+Coordinates=443,1,165,33
 
 [ListBoxItem1]
-Coordinates=272,155,89,36
+Coordinates=272,155,79,33
 
 [btnSave]
-Coordinates=343,78,62,58
-
-[BindSourceDB1]
-Coordinates=530,60,141,276
+Coordinates=343,78,54,51
 
 [ListBoxItem2]
-Coordinates=443,56,89,36
+Coordinates=443,56,79,33
 
 [edtEmail]
-Coordinates=203,535,65,58
+Coordinates=960,510,57,51
 
 [TakePhotoFromCameraAction1]
-Coordinates=670,1,195,36
+Coordinates=670,1,168,33
 
-[DataModule1.FDQuery1]
-Coordinates=530,60,153,36
+[ClientDataSet1]
+Coordinates=700,380,87,33
 Visible=False
+
+[DSProviderConnection1]
+Coordinates=376,155,132,33
+
+[SQLConnection1]
+Coordinates=566,355,97,33
+
+[BindSourceDB1]
+Coordinates=690,330,92,231
+
+[BindingsList1]
+Coordinates=150,71,82,33
 

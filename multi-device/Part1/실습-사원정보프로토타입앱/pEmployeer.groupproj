@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{99414E9B-969B-4D02-BA59-DB475AFEC19E}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Project_Prototype.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="projectDSEmpServer\prjDSEmpServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="projectDSEmpClient\prjDSEmpClient.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Project_Prototype">
+        <MSBuild Projects="Project_Prototype.dproj"/>
+    </Target>
+    <Target Name="Project_Prototype:Clean">
+        <MSBuild Projects="Project_Prototype.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Prototype:Make">
+        <MSBuild Projects="Project_Prototype.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="prjDSEmpServer">
+        <MSBuild Projects="projectDSEmpServer\prjDSEmpServer.dproj"/>
+    </Target>
+    <Target Name="prjDSEmpServer:Clean">
+        <MSBuild Projects="projectDSEmpServer\prjDSEmpServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="prjDSEmpServer:Make">
+        <MSBuild Projects="projectDSEmpServer\prjDSEmpServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="prjDSEmpClient">
+        <MSBuild Projects="projectDSEmpClient\prjDSEmpClient.dproj"/>
+    </Target>
+    <Target Name="prjDSEmpClient:Clean">
+        <MSBuild Projects="projectDSEmpClient\prjDSEmpClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="prjDSEmpClient:Make">
+        <MSBuild Projects="projectDSEmpClient\prjDSEmpClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Project_Prototype;prjDSEmpServer;prjDSEmpClient"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Project_Prototype:Clean;prjDSEmpServer:Clean;prjDSEmpClient:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Project_Prototype:Make;prjDSEmpServer:Make;prjDSEmpClient:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
