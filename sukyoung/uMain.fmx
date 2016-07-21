@@ -57,7 +57,7 @@ object Mainform: TMainform
       Size.Height = 432.000000000000000000
       Size.PlatformDefault = False
       TabHeight = 49.000000000000000000
-      TabIndex = 2
+      TabIndex = 0
       TabOrder = 1
       TabPosition = None
       Sizes = (
@@ -79,13 +79,15 @@ object Mainform: TMainform
         CustomIcon = <
           item
           end>
-        IsSelected = False
+        IsSelected = True
         Size.Width = 8.000000000000000000
         Size.Height = 8.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = ''
         TabOrder = 0
         Text = 'TabItem_Main'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
         object Layout_Buttons: TLayout
           Align = Client
           Size.Width = 320.000000000000000000
@@ -103,6 +105,7 @@ object Mainform: TMainform
             Size.PlatformDefault = False
             TabOrder = 0
             Text = #50724#49688#54792' '#50948#52824' '#49345#49464' '#49444#47749
+            OnClick = btn_5suClick
           end
           object btn_classify: TButton
             Align = Horizontal
@@ -115,6 +118,7 @@ object Mainform: TMainform
             Size.PlatformDefault = False
             TabOrder = 1
             Text = #49324#49345#51064' '#54032#48324
+            OnClick = btn_classifyClick
           end
           object btn_mind: TButton
             Align = Horizontal
@@ -127,6 +131,7 @@ object Mainform: TMainform
             Size.PlatformDefault = False
             TabOrder = 2
             Text = #49688#44221#52840' '#48393#49324#51088#51032' '#51221#49888
+            OnClick = btn_mindClick
           end
           object btn_therapy_menu: TButton
             Align = Horizontal
@@ -139,6 +144,7 @@ object Mainform: TMainform
             Size.PlatformDefault = False
             TabOrder = 3
             Text = #51656#48337#48324' '#49884#52840' '#48169#48277
+            OnClick = btn_therapy_menuClick
           end
         end
         object Layout_Title: TLayout
@@ -187,6 +193,8 @@ object Mainform: TMainform
         StyleLookup = ''
         TabOrder = 0
         Text = 'TabItem_classify_01'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
         object btn_class_left: TButton
           Tag = -1
           Align = Top
@@ -200,6 +208,7 @@ object Mainform: TMainform
           Size.PlatformDefault = False
           TabOrder = 0
           Text = #49324#49345#51064' '#54032#48324' - '#51340#49688
+          OnClick = btn_lungClick
         end
         object btn_class_right: TButton
           Tag = -2
@@ -211,6 +220,7 @@ object Mainform: TMainform
           Size.PlatformDefault = False
           TabOrder = 1
           Text = #49324#49345#51064' '#54032#48324' - '#50864#49688
+          OnClick = btn_lungClick
         end
         object btn_class_qna: TButton
           Align = Bottom
@@ -224,19 +234,22 @@ object Mainform: TMainform
           Size.PlatformDefault = False
           TabOrder = 2
           Text = #49324#49345#51064' '#54032#48324' QnA'
+          OnClick = btn_class_qnaClick
         end
       end
       object TabItem_5su_01: TTabItem
         CustomIcon = <
           item
           end>
-        IsSelected = True
+        IsSelected = False
         Size.Width = 8.000000000000000000
         Size.Height = 8.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = ''
         TabOrder = 0
         Text = 'TabItem_5su_01'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
         object btn_lung: TButton
           Tag = 1
           Margins.Left = 20.000000000000000000
@@ -406,6 +419,8 @@ object Mainform: TMainform
         StyleLookup = ''
         TabOrder = 0
         Text = 'TabItem_therapy_01'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
         object btn_recipe_by_illness: TButton
           Tag = -1
           Align = Top
@@ -419,6 +434,7 @@ object Mainform: TMainform
           Size.PlatformDefault = False
           TabOrder = 0
           Text = #51656#48337#48324' '#52376#48169
+          OnClick = btn_recipe_by_illnessClick
         end
         object btn_therapy_qna: TButton
           Align = Bottom
@@ -443,6 +459,7 @@ object Mainform: TMainform
           Size.PlatformDefault = False
           TabOrder = 1
           Text = #44284#48324' '#52376#48169
+          OnClick = btn_recipe_by_partClick
         end
       end
       object TabItem_therapy_02: TTabItem
@@ -456,6 +473,8 @@ object Mainform: TMainform
         StyleLookup = ''
         TabOrder = 0
         Text = 'TabItem_therapy_02'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
         object Layout7: TLayout
           Align = Top
           Size.Width = 320.000000000000000000
@@ -472,6 +491,9 @@ object Mainform: TMainform
             Margins.Top = 20.000000000000000000
             Margins.Right = 20.000000000000000000
             Margins.Bottom = 20.000000000000000000
+            Size.Width = 97.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
           end
           object btn_therapy_search: TButton
             Align = Client
@@ -513,6 +535,8 @@ object Mainform: TMainform
         StyleLookup = ''
         TabOrder = 0
         Text = 'TabItem_therapy_03'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
         object btn_part_internal: TButton
           Position.X = 16.000000000000000000
           Position.Y = 80.000000000000000000
@@ -614,6 +638,8 @@ object Mainform: TMainform
         StyleLookup = ''
         TabOrder = 0
         Text = 'TabItem_Image'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
         object Image1: TImage
           MultiResBitmap = <
             item

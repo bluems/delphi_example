@@ -85,6 +85,8 @@ implementation
 
 {$R *.fmx}
 
+uses Unit4;
+
 //uses EmployeeDM;
 
 procedure TPhoneMasterDetail.BackButtonClick(Sender: TObject);
@@ -179,8 +181,11 @@ begin
     clientdataset1.Edit;
 
   if clientdataset1.UpdateStatus = Tupdatestatus.usInserted then
-    clientdataset1.FieldByName('emp_no').AsInteger :=0;
+    clientdataset1.Insert;
+    //clientdataset1.FieldByName('emp_no').AsInteger :=0;
 
+  clientdataset1.FieldByName('emp_age').AsInteger:=strtoint(edtAge.Text);
+  clientdataset1.FieldByName('emp_email').AsString:=edtemail.Text;
   (clientdataset1.FieldByName('emp_image') as TBlobfield).LoadFromStream(AImage);
   (clientdataset1.FieldByName('emp_thumb') as TBlobfield).LoadFromStream(AThumbnail);
 

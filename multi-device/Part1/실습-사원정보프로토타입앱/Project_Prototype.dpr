@@ -5,7 +5,8 @@ uses
   FMX.MobilePreview,
   FMX.Forms,
   MasterDetail_Phone in 'MasterDetail_Phone.pas' {PhoneMasterDetail},
-  EmployeeDM in 'EmployeeDM.pas' {DataModule1: TDataModule};
+  EmployeeDM in 'EmployeeDM.pas' {DataModule1: TDataModule},
+  Unit4 in 'Unit4.pas';
 
 {$R *.res}
 

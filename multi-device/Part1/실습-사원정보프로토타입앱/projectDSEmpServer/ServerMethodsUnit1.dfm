@@ -23,10 +23,11 @@ object ServerMethods1: TServerMethods1
     Top = 48
   end
   object qryGetEmpInfo: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
-      'SELECT emp_name, emp_dept FROM employees WHERE emp_no=:no')
+      
+        'SELECT emp_name, emp_dept, emp_age, emp_email FROM employees WHE' +
+        'RE emp_no=:no')
     Left = 216
     Top = 136
     ParamData = <
